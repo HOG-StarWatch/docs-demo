@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>语音合成</title>
+  <meta name="description" content="基于 aquestalk.js 的本地语音合成">
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href=".">语音合成</a>
+    <button class="nav-burger" aria-label="菜单" data-burger>☰</button>
+    <nav class="nav-links" data-nav>
+      <a href="." class="active">合成</a>
+      <a href="koe.html">文本转换</a>
+    </nav>
+  </header>
+
+  <aside class="banner" id="beta-banner" hidden>
+    <span class="banner-text">现已支持英语合成。BakaK2K 引擎未经充分测试, 可在 URL 加入 <code>?beta=1</code> 启用。</span>
+    <span class="banner-actions">
+      <button class="btn btn-sm" data-beta-action="enable">启用</button>
+      <button class="btn btn-sm" data-beta-action="dismiss">保持现状</button>
+    </span>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">语音合成</h1>
+      <p class="page-sub">本地合成 · 完全离线</p>
+    </div>
+
+    <div class="card">
+      <div class="field">
+        <label class="field-label" for="input">文本</label>
+        <textarea id="input" placeholder="输入文字（仅支持中日文）"></textarea>
+      </div>
+
+      <div class="grid" style="margin-top:1rem">
+        <div class="field">
+          <label class="field-label" for="filename">文件名</label>
+          <input type="text" id="filename" value="yukkuri">
+        </div>
+        <div class="field">
+          <label class="field-label" for="voices">语音</label>
+          <select id="voices">
+            <option value="f1">女声 f1</option>
+            <option value="f2">女声 f2</option>
+            <option value="imd1">中性 imd1</option>
+            <option value="m1">男声 m1</option>
+            <option value="m2">男声 m2</option>
+            <option value="jgr">机械 jgr</option>
+            <option value="dvd">机械 dvd</option>
+            <option value="r1">气泡音 r1</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="speed">
+            <span>速度</span>
+            <span class="hint" id="speednumber">100%</span>
+          </label>
+          <input type="range" min="10" max="200" value="100" step="10" id="speed">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="play" class="btn primary">▶ 播放</button>
+        <button id="download" class="btn">下载 WAV</button>
+      </div>
+    </div>
+
+    <p class="foot muted">— 完全离线，无外部依赖 —</p>
+  </main>
+
+  <script src="xlib/yukkuri-zh.dist.js"></script>
+  <script src="static/vendor/qmsg.min.js"></script>
+  <script src="static/index.js"></script>
+</body>
+</html>

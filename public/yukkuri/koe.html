@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>文本转换</title>
+  <meta name="description" content="文本转 AquesTalk 音素串">
+  <link rel="stylesheet" href="static/index.css">
+  <script src="static/vendor/qmsg.min.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href=".">语音合成</a>
+    <button class="nav-burger" aria-label="菜单" data-burger>☰</button>
+    <nav class="nav-links" data-nav>
+      <a href=".">合成</a>
+      <a href="koe.html" class="active">文本转换</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">文本转换</h1>
+      <p class="page-sub">转换为裸 AquesTalk 字符串</p>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">中日（Wanakana）</h2>
+      <div class="card">
+        <input id="koe" class="no-border" placeholder="请输入文本">
+        <pre><code id="koe-output" class="koe-output is-empty">(输出会在这里展示)</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">中日英（BakaK2K）</h2>
+      <div class="card">
+        <input id="cbakak2k" class="no-border" placeholder="请输入文本">
+        <pre><code id="cbakak2k-output" class="koe-output is-empty">(输出会在这里展示)</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">AqKanji2Koe（OpenJTalk Wasm）</h2>
+      <div class="card">
+        <input id="aqk2k" class="no-border" placeholder="请输入文本">
+        <pre><code id="aqk2k-output" class="koe-output is-empty">(输出会在这里展示)</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Bakak2K Only</h2>
+      <div class="card">
+        <input id="bakak2k" class="no-border" placeholder="请输入文本">
+        <pre><code id="bakak2k-output" class="koe-output is-empty">(输出会在这里展示)</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">API 速览</h2>
+      <div class="card">
+        <pre><code id="yukkuricode"></code></pre>
+        <pre style="margin-top:.5rem"><code id="aqk2kcode"></code></pre>
+        <pre style="margin-top:.5rem"><code id="bakak2kcode"></code></pre>
+      </div>
+    </section>
+
+    <p class="foot muted">— 完全离线，无外部依赖 —</p>
+  </main>
+
+  <script src="xlib/yukkuri-zh.dist.js"></script>
+  <script src="static/koe.js" type="module"></script>
+</body>
+</html>

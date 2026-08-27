@@ -40,6 +40,7 @@ export default [
         { text: 'AURORA❤极光', link: '/AURORA/index.html', target: '_self', },
         { text: '网易云音乐.NCM', link: '/web-tools/NeteaseNCM.html', target: '_self', },
         { text: '静态HTML可视化编辑', link: '/web-tools/html-visual-editor.html', target: '_self', },
+        { text: 'Yukkuri油库里语音合成', link: '/yukkuri/', target: '_self', },
         { text: 'Binary-Waterfall', link: '/web-tools/Binary-Waterfall.html', target: '_self', },
         { text: 'HTML在线运行', link: '/web-tools/html_runner.html', target: '_self', },
         { text: 'HTML在线运行', link: '/web-tools/htmlrunner.html', target: '_self', },
